@@ -194,7 +194,7 @@ func (r *Renderer) drawBoard(o Options) error {
 
 func (r *Renderer) drawRankFile(o Options) error {
 	var symbols string
-	fontPath, err := findfont.Find("arial.ttf")
+	fontPath, err := findfont.Find("./assets/arial.ttf")
 	if err != nil {
 		return err
 	}
