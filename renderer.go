@@ -36,6 +36,7 @@ const (
 var (
 	colorLight        = []int{239, 218, 183}
 	colorDark         = []int{180, 135, 102}
+	colorBlack        = []int{0, 0, 0}
 	colorHighlight    = []int{205, 210, 122}
 	colorHighlightDim = []int{170, 160, 75}
 	colorCheck        = []int{227, 30, 32}
@@ -209,9 +210,9 @@ func (r *Renderer) drawRankFile(o Options) error {
 	for i, symbol := range symbols {
 		var color []int
 		if i%2 == 0 {
-			color = colorLight
+			color = colorBlack
 		} else {
-			color = colorDark
+			color = colorBlack
 		}
 		r.context.SetRGB255(color[0], color[1], color[2])
 		r.context.DrawString(string(symbol), float64(r.drawSize.gridSize*i+2), float64(o.BoardSize-3))
@@ -225,9 +226,9 @@ func (r *Renderer) drawRankFile(o Options) error {
 	for i, symbol := range symbols {
 		var color []int
 		if i%2 == 0 {
-			color = colorLight
+			color = colorBlack
 		} else {
-			color = colorDark
+			color = colorBlack
 		}
 		r.context.SetRGB255(color[0], color[1], color[2])
 		r.context.DrawString(string(symbol), float64(o.BoardSize-10), float64(r.drawSize.gridSize*i+12))
